@@ -18,7 +18,7 @@ namespace OpenTheWindows
                 if (__instance.switchOnInt) compWindow.parent.BroadcastCompSignal(compWindow.Props.signal.ToString() + "On");
                 else compWindow.parent.BroadcastCompSignal(compWindow.Props.signal.ToString() + "Off");
 
-                if (compWindow.parent.Spawned) compWindow.parent.Map.mapDrawer.MapMeshDirty(compWindow.parent.Position, MapMeshFlag.Things | MapMeshFlag.Buildings);
+                if (compWindow.parent.Spawned) compWindow.parent.Map.mapDrawer.MapMeshDirty(compWindow.parent.Position, MapMeshFlagDefOf.Things | MapMeshFlagDefOf.Buildings);
                 return false;
             }
             return true;

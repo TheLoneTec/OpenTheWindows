@@ -5,7 +5,7 @@ using static OpenTheWindows.LightingOverlay_Regenerate;
 namespace OpenTheWindows
 {
     //Illuminates the tiles that are under a window's influence area.
-    [HarmonyPatch(typeof(GlowGrid), nameof(GlowGrid.GameGlowAt))]
+    [HarmonyPatch(typeof(GlowGrid), nameof(GlowGrid.GroundGlowAt))]
     public static class GlowGrid_GameGlowAt
     {
         public static float Postfix(float __result, IntVec3 c)

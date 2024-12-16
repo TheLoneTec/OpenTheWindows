@@ -20,4 +20,14 @@
 		<li IfModActive="wit.expandedroofing">Mods/wit.expandedroofing</li>
 		<li IfModActive="malteschulze.rimmsqol">Mods/malteschulze.rimmsqol</li>
 	</v1.4>
+	<v1.5>
+		<li>1.5</li>
+		<li>Common</li>
+		<li IfModActive="Dubwise.DubsSkylights">Mods/Dubwise.DubsSkylights</li>
+		<li IfModActive="machine.rtr">Mods/machine.rtr</li>
+		<li IfModActive="nanoce.glasslights">Mods/nanoce.glasslights</li>
+		<li IfModActive="spoden.justglass">Mods/spoden.justglass</li>
+		<li IfModActive="wit.expandedroofing">Mods/wit.expandedroofing</li>
+		<li IfModActive="malteschulze.rimmsqol">Mods/malteschulze.rimmsqol</li>
+	</v1.5>
 </loadFolders>

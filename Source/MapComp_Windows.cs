@@ -38,7 +38,7 @@ namespace OpenTheWindows
             if (DubsSkylights && GetSkyLightGrid()[map.cellIndices.CellToIndex(tile)]) return;
             if (!bypass && tile.IsTransparentRoof(map)) return;
             WindowCells.Remove(tile);
-            map.glowGrid.MarkGlowGridDirty(tile);
+            map.glowGrid.DirtyCache(tile);
             lightOverlay.needsUpdate = true;
         }
 
@@ -54,7 +54,7 @@ namespace OpenTheWindows
                 var wrongTiles = map.AllCells.Select(x => map.cellIndices.CellToIndex(x)).Where(i => GetSkyLightGrid()[i]);
                 foreach (var index in wrongTiles)
                 {
-                    map.glowGrid.MarkGlowGridDirty(map.cellIndices.IndexToCell(index));
+                    map.glowGrid.DirtyCache(map.cellIndices.IndexToCell(index));
                 }
             }
             base.FinalizeInit();
@@ -64,7 +64,7 @@ namespace OpenTheWindows
         {
             if (WindowCells.Contains(tile)) return;
             WindowCells.Add(tile);
-            map.glowGrid.MarkGlowGridDirty(tile);
+            map.glowGrid.DirtyCache(tile);
             lightOverlay.needsUpdate = true;
         }
 
